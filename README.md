@@ -1,10 +1,10 @@
-% Analysis of dynamic three-dimensional images for sperm motion studies
+# Analysis of dynamic three-dimensional images for sperm motion studies
 ## An investigation of boar spermatozoa’s kinematics
 Alicia Mosquera Rodríguez
 
-Supervisors: Prof. Jon Sporring and Asst. Prof. Amin Doostmohammadi
-
 May 20, 2022
+
+Supervisors: Prof. Jon Sporring and Asst. Prof. Amin Doostmohammadi
 
 MSc in Physics, University of Copenhagen
 
