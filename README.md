@@ -63,7 +63,11 @@ later generalised to be able to compute the same parameters for any other
 fragment of either dataset 1 or 2.
 
 1. Segmentation
+
 We applied three different techniques:
+
     1.1. one consisting of Gaussian scale-space smoothing and later thresholding
+
     1.2. random forest classifier with the tool Labkit from ImageJ
+    
     1.3. manual segmentation to compare the former two
