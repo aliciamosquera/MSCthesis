@@ -34,7 +34,7 @@ expectations of being an effective tool for studying sperm dynamics.
 
 ### Images available
 Three different datasets were provided by the laboratory in Barcelona. One was recorded in December 2019 (dataset0 equivalent to 9_2) and the other two in December 2021 (dataset1 equivalent to 00068 and dataset2 equivalent to 00064). Dataset 0 was mainly used to get acquainted with the data and see what possibilities we had with it, hence the name. It presented several problems, such as fluorescence in certain background sections, a flow in the whole sample and an imaging artefact similar to a mirroring effect. Since these problems were fixed in datasets 1 and 2, those were the ones used
-to analyse the motion. The parameters of the three datasets are specified in [datasets.json](../tree/main/data/datasets.json)
+to analyse the motion. The parameters of the three datasets are specified in [datasets.json](data/datasets.json)
 
 ### Processing done outside of this code
 
