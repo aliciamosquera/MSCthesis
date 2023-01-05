@@ -13,7 +13,7 @@ neck_exist = False
 #%%
 import json
 import numpy as np
-d = json.load(open("C:/Users/34646/Downloads/github/datasets.json","r"))
+d = json.load(open("../data/datasets.json","r"))
 
 path = 'C:/Users/34646/Documents/Copenhagen/Clases/TFM/newdata/sperm0006'+str(d['data'][cellnum-1])+'/segmentation'
 
@@ -26,8 +26,6 @@ voxel = np.array(d['voxel']) #um (x,y,z)
 
 
 #%%
-import sys
-sys.path.insert(0, 'C:/Users/34646/Documents/Copenhagen/Clases/TFM/newdata/sperm00068_t1_146/segmentation')
 from functions import reshapeToEvenSides, read
 
 import cc3d #connected components in 3D
@@ -37,7 +35,7 @@ from scipy import ndimage as ndi
 from skimage import io, morphology
 #import matplotlib.animation as animation
 
-plt.style.use('C:/Users/34646/Documents/Copenhagen/Clases/TFM/thesis.mplstyle')
+plt.style.use('../thesis.mplstyle')
 
 
 def PCA(img_h, origin, file_h, count, eigvec_old):

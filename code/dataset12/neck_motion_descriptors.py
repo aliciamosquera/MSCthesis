@@ -10,7 +10,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.signal import savgol_filter
 from mpl_toolkits.axes_grid1 import make_axes_locatable
-plt.style.use('C:/Users/34646/Documents/Copenhagen/Clases/TFM/thesis.mplstyle')
+plt.style.use('../thesis.mplstyle')
 
 
 #%%
@@ -18,7 +18,7 @@ cellnum = 10
 # Type of segmentation to analyze (Gaussian/ImageJ)
 Gaussian = True
 
-d = json.load(open("C:/Users/34646/Downloads/github/datasets.json","r"))
+d = json.load(open("../data/datasets.json","r"))
 path = 'C:/Users/34646/Documents/Copenhagen/Clases/TFM/newdata/sperm0006'+str(d['data'][cellnum-1])
 
 def convert_to_array(x):
@@ -248,11 +248,6 @@ for k in range(n_points-1):
     r_y = np.append(r_y, head_coord[k][1]/np.sin(angle[k]))
     #print(head_coord[k][0], head_coord[k][1])
 #print(np.cos(angle))
-
-#----------- SPEED OF ROTATION -----------------
-
-
-#----------- NOISE OF NECK MOVEMENT ------------
 
 
 #%%
