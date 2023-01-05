@@ -62,12 +62,12 @@ The outline of the image processing goes as follows:
     
     We applied three different techniques:
 
-    1.1. One consisting of Gaussian scale-space smoothing and later thresholding
-        The code can be found in 
+- One consisting of Gaussian scale-space smoothing and later thresholding
+    The code can be found in 
 
-    1.2. random forest classifier with the tool Labkit from ImageJ
+- random forest classifier with the tool Labkit from ImageJ
 
-    1.3. manual segmentation to compare the former two
+- manual segmentation to compare the former two
 
 2. Linking the position of the same cell in subsequent image frames to obtain the trajectory of each cell
 3. Calculating sperm motility parameters from the obtained trajectories 
