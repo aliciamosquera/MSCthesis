@@ -34,8 +34,15 @@ expectations of being an effective tool for studying sperm dynamics.
 ## Technical details
 
 ### Data
-Three datasets of 4D images were used in the development of this thesis, described in 'datasets.json'. The dataset used to obtain the final conclusions was dataset2, as it was the one with the highest scanning frequency and better images.
-- The first approach to the development is contained in the folder data, which used dataset0 and dataset1
-- The final development is contained in the folder newdata, which used dataset2
+Three different datasets were provided by the laboratory in Barcelona. One
+was recorded in December 2019 (dataset 0) and the other two in December
+2021 (datasets 1 & 2). Dataset 0 was mainly used to get acquainted with the
+data and see what possibilities we had with it, hence the name. It presented
+several problems, such as fluorescence in certain background sections, a flow
+in the whole sample and an imaging artefact similar to a mirroring effect.
+Since these problems were fixed in datasets 1 and 2, those were the ones used
+to analyse the motion. The parameters of the three datasets are specified in _datasets.json_.
+- The folder **data** contains the processing developed with dataset 0
+- The folder **newdata** contains the processing developed with datasets 1 and 2
 
 ###
