@@ -68,7 +68,7 @@ The outline of the image processing goes as follows:
 
 2. Linking the position of the same cell in subsequent image frames to obtain the trajectory of each cell
     - Code can be found in [choose_label_ConnectedComponents.py](code/dataset12/choose_label_ConnectedComponents.py) for manually choosing the label of each connected component
-    - In [PCA.py](code/dataset12/PCA.py) the PCA of each frame is processed to create the trajectorie
+    - In [PCA.ipynb](code/dataset12/PCA.ipynb) the PCA of each frame is processed to create the trajectory
 3. Calculating sperm motility parameters from the obtained trajectories
-    - The trajectories are saved into dataframes in [neck_motion](code/dataset12/neck_motion.py) and histograms created of the distances btw neck and head, the volume and the number of z-slices of the cell in each timeframe
-    - These dataframes are read in [neck_motion_descriptors](code/dataset12/neck_motion_descriptors.py) to calculate the cell's speed, MSD, Tait-Bryan angles, head's angle of rotation
+    - The trajectories are saved into dataframes in [neck_motion](code/dataset12/neck_motion.py) and histograms are created of the distances btw neck and head, the volume and the number of z-slices of the cell in each timeframe
+    - These dataframes are read in [neck_motion_descriptors](code/dataset12/neck_motion_descriptors.py) to calculate the cell's speed, MSD, Tait-Bryan angles and head's angle of rotation
