@@ -53,21 +53,19 @@ we could not perform a 3D segmentation ourselves, we segmented three slices for 
 - Random forest classifier with ImageJ to segment all the snippets.
 
 ## Automatic cell tracking system
-The outline of the image processing goes as follows:
-1. Image segmentation to obtain the contour and centroid position of each sperm head
-2. Linking the position of the same cell in subsequent image frames to obtain the trajectory of each cell
-3. Calculating sperm motility parameters from the obtained trajectories
-
 The pipeline was created based on one fragment of dataset 1, although it was
 later generalised to be able to compute the same parameters for any other
 fragment of either dataset 1 or 2.
 
-1. Segmentation
-
+The outline of the image processing goes as follows:
+1. Image segmentation to obtain the contour and centroid position of each sperm head
 We applied three different techniques:
 
-    1.1. one consisting of Gaussian scale-space smoothing and later thresholding
+1.1. one consisting of Gaussian scale-space smoothing and later thresholding
 
     1.2. random forest classifier with the tool Labkit from ImageJ
-    
+
     1.3. manual segmentation to compare the former two
+
+2. Linking the position of the same cell in subsequent image frames to obtain the trajectory of each cell
+3. Calculating sperm motility parameters from the obtained trajectories 
