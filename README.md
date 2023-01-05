@@ -59,9 +59,11 @@ fragment of either dataset 1 or 2.
 
 The outline of the image processing goes as follows:
 1. Image segmentation to obtain the contour and centroid position of each sperm head
+    
     We applied three different techniques:
 
-    1.1. one consisting of Gaussian scale-space smoothing and later thresholding
+    1.1. One consisting of Gaussian scale-space smoothing and later thresholding
+        The code can be found in 
 
     1.2. random forest classifier with the tool Labkit from ImageJ
 
