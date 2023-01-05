@@ -1,5 +1,4 @@
-# Analysis of dynamic three-dimensional images for sperm motion studies
-## An investigation of boar spermatozoa’s kinematics
+# Analysis of dynamic three-dimensional images for sperm motion studies - An investigation of boar spermatozoa’s kinematics
 Alicia Mosquera Rodríguez
 
 May 20, 2022
