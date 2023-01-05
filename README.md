@@ -48,9 +48,9 @@ cell. In practice, our samples were densely packed with sperm cells, so it was
 not possible to define a volume that contained the whole motion of only one
 cell. Nonetheless, we prioritised having the entire time series of one cell in the
 same movie and later segmenting the different cells. 14 snippets made the cut from datasets 1 & 2.
+- Random forest classifier with ImageJ to segment all the snippets.
 - Segmentation of the head was done manually off of one snippet to have a baseline. Given that
 we could not perform a 3D segmentation ourselves, we segmented three slices for each coordinate plane (xy, yz, zx). Each slice was chosen at random and accepted if we could see a cell in it with the naked eye. For this we made use of [Photopea](https://www.photopea.com/).
-- Random forest classifier with ImageJ to segment all the snippets.
 
 ## Automatic cell tracking system
 The pipeline was created based on one fragment of dataset 1, although it was
@@ -62,9 +62,9 @@ The outline of the image processing goes as follows:
     
     We applied three different techniques:
 
-    - One consisting of Gaussian scale-space smoothing and later thresholding. The code can be found in []() 
+    - One consisting of Gaussian scale-space smoothing and later thresholding. The code can be found in [Gaussian_scalespace.py](code/dataset12/segmentation/Gaussian_scalespace.py) where the threshold was tuned with [sigma_and_threshold_tuning.py](code/dataset12/segmentation/sigma_and_threshold_tuning.py)
     - Random forest classifier with the tool Labkit from ImageJ
-    - Manual segmentation to compare the former two. The selection of the random slices was done through [random_slices.py](code/dataset12/segmentation/random_slices.py)
+    - Manual segmentation to compare the former two. The selection of the random slices was done through [random_slices.py](code/dataset12/segmentation/random_slices.py) and the comparison in [segmentation_comparison.py](code/dataset12/segmentation/segmentation_comparison.py)
 
 2. Linking the position of the same cell in subsequent image frames to obtain the trajectory of each cell
 3. Calculating sperm motility parameters from the obtained trajectories 

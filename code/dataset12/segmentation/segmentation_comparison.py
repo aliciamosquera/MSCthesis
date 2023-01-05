@@ -9,9 +9,6 @@ import glob
 from skimage import io
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
-
-import sys
-sys.path.insert(0, 'C:/Users/34646/Documents/Copenhagen/Clases/TFM/newdata/sperm00068_t1_146/segmentation')
 from functions import plot_zx, plot_yz, confusionMatrix, paramConfusionMatrix, plotConfusionMatrix
 
 #%%

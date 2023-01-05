@@ -9,7 +9,7 @@ cellnum = 10
 
 #%%
 import json
-d = json.load(open("C:/Users/34646/Downloads/github/datasets.json","r"))
+d = json.load(open("../data/datasets.json","r"))
 
 path = 'C:/Users/34646/Documents/Copenhagen/Clases/TFM/newdata/sperm0006'+str(d['data'][cellnum-1])
 
@@ -23,8 +23,6 @@ thresh = d['thresh']
 
 
 #%%
-import sys
-sys.path.insert(0, 'C:/Users/34646/Documents/Copenhagen/Clases/TFM/newdata/sperm00068_t1_146/segmentation')
 from functions import scale, reshapeToEvenSides
 
 import cv2 as cv
