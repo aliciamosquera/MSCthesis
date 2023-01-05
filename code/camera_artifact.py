@@ -3,6 +3,8 @@
 Created on Mon Feb 21 16:39:27 2022
 
 @author: Alicia Mosquera
+
+Histograms of the datasets and estimation of their noise
 """
 #%%
 import cc3d
@@ -10,13 +12,9 @@ import numpy as np
 import pandas as pd
 from skimage import io
 import matplotlib.pyplot as plt
+from functions import read
 
-plt.style.use('C:/Users/34646/Documents/Copenhagen/Clases/TFM/thesis.mplstyle')
-
-def read(filename):
-    volume_time = io.imread(filename)
-    t,z,y,x = volume_time.shape
-    return volume_time,t,z,y,x
+plt.style.use('thesis.mplstyle')
 
 volume_time,t,z,y,x = read('sperm00068_t1_146/sperm00068_t1_146.tif')
 segmented_head = io.imread('sperm00068_t1_146/segmentation/sperm00068_t1_146_segmentation_head.tif')
@@ -25,7 +23,7 @@ labels_h = pd.read_csv('sperm00068_t1_146/segmentation/label_head_gaussian_done.
 #%%
 # Estimate the noise as the std of homogeneous areas (both background and foreground)
 # DONE WITH IMAGEJ
-df1 = pd.read_csv('noise_std_00068.csv') #dat0:9-2 (10 Hz), dat1:00068 (40 Hz), dat2:00064 (70 Hz)
+df1 = pd.read_csv('../data/noise_std_00068.csv') #dat0:9-2 (10 Hz), dat1:00068 (40 Hz), dat2:00064 (70 Hz)
 
 mean = df1['Mean'].to_numpy()
 std = df1['StdDev'].to_numpy()
@@ -41,9 +39,9 @@ print('The background noise is %.2f and the foreground %.2f' % (std_b, std_f))
 print('SNR in foreground is %i' % (mean_f/std_f))
 
 #%%
-# Histogram of the whole dataframe
-df = pd.read_csv('hist_00068.csv')
-df_param = pd.read_csv('hist_00068_param.csv')
+# Histogram of the whole dataframe, obtained from ImageJ
+df = pd.read_csv('../data/hist_00068.csv')
+df_param = pd.read_csv('../data/hist_00068_param.csv')
 
 hist = df['count'].to_numpy()
 bin_start = df['bin start'].to_numpy()

@@ -3,6 +3,8 @@
 Created on Wed Mar 16 17:03:17 2022
 
 @author: Alicia Mosquera
+
+Returns random slices in all 3 planes of the dataset
 """
 import os
 import glob
@@ -10,9 +12,6 @@ import cv2 as cv
 import matplotlib.pyplot as plt
 from numpy.random import default_rng
 rng = default_rng()
-
-import sys
-sys.path.insert(0, 'C:/Users/34646/Documents/Copenhagen/Clases/TFM/newdata/sperm00068_t1_146/segmentation')
 from functions import read, plot_yz, plot_zx
 
 

@@ -62,9 +62,9 @@ The outline of the image processing goes as follows:
     
     We applied three different techniques:
 
-    - One consisting of Gaussian scale-space smoothing and later thresholding. The code can be found in 
-    - random forest classifier with the tool Labkit from ImageJ
-    - manual segmentation to compare the former two
+    - One consisting of Gaussian scale-space smoothing and later thresholding. The code can be found in []() 
+    - Random forest classifier with the tool Labkit from ImageJ
+    - Manual segmentation to compare the former two. The selection of the random slices was done through [random_slices.py](code/dataset12/segmentation/random_slices.py)
 
 2. Linking the position of the same cell in subsequent image frames to obtain the trajectory of each cell
 3. Calculating sperm motility parameters from the obtained trajectories 

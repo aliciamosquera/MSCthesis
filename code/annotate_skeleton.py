@@ -3,6 +3,8 @@
 Created on Mon May  9 22:33:28 2022
 
 @author: Alicia Mosquera
+
+I started in Jupyter Notebook but I had to transfer to .py
 """
 import json
 import numpy as np
@@ -11,8 +13,8 @@ from skimage import io
 import matplotlib.pyplot as plt
 from sklearn.cluster import SpectralClustering
 
-plt.style.use('C:/Users/34646/Documents/Copenhagen/Clases/TFM/thesis.mplstyle')
-d = json.load(open("C:/Users/34646/Downloads/github/datasets.json","r"))
+plt.style.use('thesis.mplstyle')
+d = json.load(open("../data/datasets.json","r"))
 
 prop = 'Head CoM'
 def prop_real(prop):
