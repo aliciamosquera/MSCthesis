@@ -33,16 +33,17 @@ expectations of being an effective tool for studying sperm dynamics.
 ## Technical details
 
 ### Images available
-Three different datasets were provided by the laboratory in Barcelona. One
-was recorded in December 2019 (dataset 0) and the other two in December
-2021 (datasets 1 & 2). Dataset 0 was mainly used to get acquainted with the
-data and see what possibilities we had with it, hence the name. It presented
-several problems, such as fluorescence in certain background sections, a flow
-in the whole sample and an imaging artefact similar to a mirroring effect.
-Since these problems were fixed in datasets 1 and 2, those were the ones used
-to analyse the motion. The parameters of the three datasets are specified in _datasets.json_.
-- The folder **data** contains the processing developed with dataset 0
-- The folder **newdata** contains the processing developed with datasets 1 and 2
+Three different datasets were provided by the laboratory in Barcelona. One was recorded in December 2019 (dataset0 equivalent to 9_2) and the other two in December 2021 (dataset1 equivalent to 00068 and dataset2 equivalent to 00064). Dataset 0 was mainly used to get acquainted with the data and see what possibilities we had with it, hence the name. It presented several problems, such as fluorescence in certain background sections, a flow in the whole sample and an imaging artefact similar to a mirroring effect. Since these problems were fixed in datasets 1 and 2, those were the ones used
+to analyse the motion. The parameters of the three datasets are specified in _data/datasets.json_.
 
-### data
-### newdata
+## How to run the code
+1. To estimate the noise in the datasets we calculated the intensity’s standard
+deviation in several homogeneous regions (both background and foreground) with ImageJ, resulting in the documents *data/noise_std_...*.
+2. The datasets were too big to compute altogether (2.5 GB each), so we divided
+them into smaller snippets with ImageJ. Since our aim was to study the
+motion of individual cells, it made sense to fragment the datasets into snippets
+of cells. The idea was that each section depicted the whole time series of one
+cell. In practice, our samples were densely packed with sperm cells, so it was
+not possible to define a volume that contained the whole motion of only one
+cell. Nonetheless, we prioritised having the entire time series of one cell in the
+same movie and later segmenting the different cells.
