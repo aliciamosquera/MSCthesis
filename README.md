@@ -38,9 +38,9 @@ to analyse the motion. The parameters of the three datasets are specified in [da
 
 ### Processing done outside of this code
 
-1. To estimate the noise in the datasets we calculated the intensity’s standard
+- To estimate the noise in the datasets we calculated the intensity’s standard
 deviation in several homogeneous regions (both background and foreground) with ImageJ, resulting in the documents [noise_std_...](data)
-2. The datasets were too big to compute altogether (2.5 GB each), so we divided
+- The datasets were too big to compute altogether (2.5 GB each), so we divided
 them into smaller snippets with ImageJ. Since our aim was to study the
 motion of individual cells, it made sense to fragment the datasets into snippets
 of cells. The idea was that each section depicted the whole time series of one
@@ -48,8 +48,9 @@ cell. In practice, our samples were densely packed with sperm cells, so it was
 not possible to define a volume that contained the whole motion of only one
 cell. Nonetheless, we prioritised having the entire time series of one cell in the
 same movie and later segmenting the different cells. 14 snippets made the cut from datasets 1 & 2.
-3. Segmentation of the head was done manually off of one snippet to have a baseline. Given that
+- Segmentation of the head was done manually off of one snippet to have a baseline. Given that
 we could not perform a 3D segmentation ourselves, we segmented three slices for each coordinate plane (xy, yz, zx). Each slice was chosen at random and accepted if we could see a cell in it with the naked eye. For this we made use of [Photopea](https://www.photopea.com/).
+- Random forest classifier with ImageJ to segment all the snippets.
 
 ## Automatic cell tracking system
 The outline of the image processing goes as follows:
