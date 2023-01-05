@@ -48,7 +48,20 @@ cell. In practice, our samples were densely packed with sperm cells, so it was
 not possible to define a volume that contained the whole motion of only one
 cell. Nonetheless, we prioritised having the entire time series of one cell in the
 same movie and later segmenting the different cells. 14 snippets made the cut from datasets 1 & 2.
-3. The snippets were then annotated with the use of [Make Sense](https://github.com/SkalskiP/make-sense/)
+3. Segmentation of the head was done manually off of one snippet to have a baseline. Given that
+we could not perform a 3D segmentation ourselves, we segmented three slices for each coordinate plane (xy, yz, zx). Each slice was chosen at random and accepted if we could see a cell in it with the naked eye. For this we made use of [Photopea](https://www.photopea.com/).
 
-## How to run the code
-1. 
+## Automatic cell tracking system
+The outline of the image processing goes as follows:
+1. Image segmentation to obtain the contour and centroid position of each sperm head
+2. Linking the position of the same cell in subsequent image frames to obtain the trajectory of each cell
+3. Calculating sperm motility parameters from the obtained trajectories
+The pipeline was created based on one fragment of dataset 1, although it was
+later generalised to be able to compute the same parameters for any other
+fragment of either dataset 1 or 2.
+
+1. Segmentation
+We applied three different techniques:
+- one consisting of Gaussian scale-space smoothing and later thresholding
+- random forest classifier with the tool Labkit from ImageJ
+- manual segmentation to compare the former two
