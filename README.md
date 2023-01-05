@@ -39,7 +39,7 @@ to analyse the motion. The parameters of the three datasets are specified in [da
 ### Processing done outside of this code
 
 1. To estimate the noise in the datasets we calculated the intensity’s standard
-deviation in several homogeneous regions (both background and foreground) with ImageJ, resulting in the documents [noise_std_...](../data)
+deviation in several homogeneous regions (both background and foreground) with ImageJ, resulting in the documents [noise_std_...](data)
 2. The datasets were too big to compute altogether (2.5 GB each), so we divided
 them into smaller snippets with ImageJ. Since our aim was to study the
 motion of individual cells, it made sense to fragment the datasets into snippets
