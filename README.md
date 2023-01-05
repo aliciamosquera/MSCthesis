@@ -32,7 +32,7 @@ expectations of being an effective tool for studying sperm dynamics.
 
 ## Technical details
 
-### Data
+### Images available
 Three different datasets were provided by the laboratory in Barcelona. One
 was recorded in December 2019 (dataset 0) and the other two in December
 2021 (datasets 1 & 2). Dataset 0 was mainly used to get acquainted with the
@@ -44,4 +44,5 @@ to analyse the motion. The parameters of the three datasets are specified in _da
 - The folder **data** contains the processing developed with dataset 0
 - The folder **newdata** contains the processing developed with datasets 1 and 2
 
-###
+### data
+### newdata
